@@ -7,7 +7,7 @@ Note that this model can hallucinate and may not be the best fit for all papers.
 
 You have two ways to run paper to video generation. 
 
-One, you can use our free service: [TrendGPT](https://www.trendgpt.site/), and sign up to upload paper and convert to video (this would typically takes about 10 - 15 minutes, and we suggest you trim the paper first before uploading, you can in general remove every thing after the reference section of a paper). 
+One, you can use our #free service: [TrendGPT](https://www.trendgpt.site/), and sign up to upload paper and convert to video (this would typically takes about 10 - 15 minutes, and we suggest you trim the paper first before uploading, you can in general remove every thing after the reference section of a paper). 
 
 Second, you can do it on your own using our code base. Though you have to have access to Microsoft Azure GTP-4 model and GCP TTS Service (you need to pay the fees)
 
