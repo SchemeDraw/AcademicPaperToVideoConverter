@@ -2,7 +2,7 @@
 
 This repo converts academic papers into videos that explain the paper contents briefly. Usually the videos are of length 10-20 minutes.
 
-Note that this model can hallucinate and may not be the best fit for all papers. 
+Note that this model can hallucinate and may not be the best fit for all papers. (Bonus: here we generate some great paper videos on [Trend in Research](https://www.youtube.com/@trendinresearch))
 
 
 You have two ways to run paper to video generation. 
