@@ -1,32 +1,40 @@
-# PaperToVideo
+# PaperToVideo - Convert Academic Papers to Engaging Videos
 
-This repo converts academic papers into videos that explain the paper contents briefly. Usually the videos are of length 10-20 minutes.
+Welcome to PaperToVideo! This repository converts academic papers into engaging video summaries, typically 10-20 minutes in length. It's an excellent tool for researchers, students, and educators looking to quickly understand the core concepts of a paper.
 
-Note that this model can hallucinate and may not be the best fit for all papers. (Bonus: here we generate some great paper videos on Youtube: [Trend in Research](https://www.youtube.com/@trendinresearch))
+## Overview
 
+PaperToVideo uses advanced AI models to generate concise video explanations of academic papers. Note that the model may occasionally hallucinate and might not be suitable for all types of papers.
 
-You have two ways to run paper to video generation. 
+**Bonus:** Check out some great paper videos on YouTube: [Trend in Research](https://www.youtube.com/@trendinresearch)
 
-One, you can use our **free** service: [TrendGPT](https://www.trendgpt.site/), and sign up to upload paper and convert to video (this would typically takes about 10 - 15 minutes, and we suggest you trim the paper first before uploading, you can in general remove every thing after the reference section of a paper). 
+## How to Use
 
-Second, you can do it on your own using our code base. Though you have to have access to Microsoft Azure GTP-4 model and GCP TTS Service (**you need to pay the fees**)
+You have two options to generate videos from academic papers:
 
-## Step 0: preparation
+### Option 1: Use Our Free Service
 
-First of all, run `install.sh` to install required packages. A virtual environment with python==3.11 is recommended. 
+Visit [TrendGPT](https://www.trendgpt.site/) to sign up and upload your paper for conversion. This process usually takes about 10-15 minutes. We recommend trimming the paper to remove sections after the references before uploading.
 
-To run paper to video generation, you need to download the paper you want to convert and save it under `papers` folder, with name you assign. Let's call the paper name `placeholder.pdf`,
-then you need to get your microsoft Azure Open AI model served, and get the model version, api keys, end point, for both the model and the embedding model. Here we used gpt-4-turbo. But you can feel free to change the model version (without guarantee that the model still works when it's changed to weaker models like GPT-3.5).
+### Option 2: Run Locally Using Our Code
 
-You would also need to get your google cloud credentials and save it in a json file, and put the path in the file `create_video_from_paper.py` as `google_credential_path = YOUR_GOOGLE_CREDENTIAL_PATH`. We use google cloud service mainly for doing text-to-speech generation.
+If you prefer to run the process on your own machine, follow these steps. Note that you will need access to Microsoft Azure GPT-4 model and Google Cloud TTS Service (fees may apply).
 
-## Step 1: run a separate serve program
+### Step 0: Preparation
 
-Run `serve.sh` and keep it running for about 2 minutes (this is crucial to ensure no bugs in the next step)
+1. Run `install.sh` to install the required packages. A virtual environment with Python 3.11 is recommended.
+2. Download the paper you want to convert and save it in the `papers` folder. Let's call the paper `placeholder.pdf`.
+3. Obtain your Microsoft Azure OpenAI model credentials, including the model version, API keys, and endpoint. We use GPT-4-turbo, but other versions may work (though not guaranteed with weaker models like GPT-3.5).
+4. Get your Google Cloud credentials, save them in a JSON file, and update the path in `create_video_from_paper.py` as `google_credential_path = YOUR_GOOGLE_CREDENTIAL_PATH`. Google Cloud is used for text-to-speech generation. Feel free to modify to use other free TTS service.
 
-## Step 2: run video generation
+### Step 1: Run the Serve Program
 
-run `python create_video_from_paper.py` and the paper slides pdf file and generated mp4 file will be in the folder `resultant_latex/placeholder`. Where `placeholder` is the original paper pdf name. 
+Run `serve.sh` and keep it running for about 2 minutes to avoid bugs in the next step. Then keep it running in the backend.
 
+### Step 2: Generate the Video
 
+Run `python create_video_from_paper.py`. The paper slides PDF file and generated MP4 file will be saved in the `resultant_latex/placeholder` folder, where `placeholder` is the original paper PDF name.
 
+## Contributing
+
+We welcome contributions! 
