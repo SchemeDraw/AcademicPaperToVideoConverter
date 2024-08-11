@@ -2,6 +2,7 @@
 
 Welcome to PaperToVideo! This repository converts academic papers into engaging video summaries, typically 10-20 minutes in length. It's an excellent tool for researchers, students, and educators looking to quickly understand the core concepts of a paper.
 
+Produce Demo: [demo](https://youtu.be/va4cEo35VqQ?si=pR-t7PKVtcuney3B)
 ## Overview
 
 PaperToVideo uses advanced AI models to generate concise video explanations of academic papers. Note that the model may occasionally hallucinate and might not be suitable for all types of papers.
